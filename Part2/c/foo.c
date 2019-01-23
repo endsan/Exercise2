@@ -2,20 +2,25 @@
 #include <stdio.h>
 
 int i = 0;
+pthread_mutex_t count_mutex;
 
 // Note the return type: void*
 void* incrementingThreadFunction(){
     for (int j = 0; j < 1000000; j++) {
-	// TODO: sync access to i
+	// sync access to i
+  pthread_mutex_lock(&count_mutex);
 	i++;
+  pthread_mutex_unlock(&count_mutex);
     }
     return NULL;
 }
 
 void* decrementingThreadFunction(){
     for (int j = 0; j < 1000000; j++) {
-	// TODO: sync access to i
+	// sync access to i
+  pthread_mutex_lock(&count_mutex);
 	i--;
+  pthread_mutex_unlock(&count_mutex);
     }
     return NULL;
 }
