@@ -19,7 +19,7 @@
  > A race condition is a flaw that occurs when the timing or ordering of events effect the program's correctness. To produce a race condition you need for instance context switches, OS-signals, memory operations on a multiprocessor and hardware interrupts. A data race happens if there are two memory accesses in a program where both tarhet the same location, are performed concurrently by two threads, are not reads and are not synchronization operations.
 
 ### List some advantages of using message passing over lock-based synchronization primitives.
-> Can use concurrency. Safety and convenience, and easier to reason about. Avoid deadlocks, control of memory access for each process.
+> Safety and convenience, and easier to reason about. Avoid deadlocks, control of memory access for each process.
 
 ### List some advantages of using lock-based synchronization primitives over message passing.
 > Easier, you can write straight forward. Don't have to think about detail about memory allocation. Message passing can lead to complex error messages and errors. Order is "random", so you don't have to think about when processes are executed.
