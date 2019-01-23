@@ -7,7 +7,7 @@
 > A variable or abstract data type, to control access to a common resource by multiple processes (in a concurrent system)
 
 ### What is a mutex?
-> A mutially exclusive flag. It allowes one thread in and block the access to all the other threads. 
+> A mutially exclusive flag. It allowes one thread in and blocks the access to all the other threads. 
 
 ### What is the difference between a mutex and a binary semaphore?
 > A mutex semaphore is "owned" by the task that takes it. If task B attempts to semGive a mutex currently held by task A, task B will fail and return an error. For binary semphores, task B is penden waiting for something to happen. Then task B should run and take appropriate actions for the sensor trip, and then go back to waiting. 
